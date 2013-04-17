@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F87936B171F271A0010D774 /* LHBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F87936A171F271A0010D774 /* LHBarChart.m */; };
+		4F87936E171F3CD30010D774 /* LHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F87936D171F3CD30010D774 /* LHChartView.m */; };
+		4FF2D91E171EE45900C91EF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2D91D171EE45900C91EF3 /* UIKit.framework */; };
+		4FF2D920171EE45900C91EF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2D91F171EE45900C91EF3 /* Foundation.framework */; };
+		4FF2D922171EE45900C91EF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2D921171EE45900C91EF3 /* CoreGraphics.framework */; };
+		4FF2D928171EE45900C91EF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2D926171EE45900C91EF3 /* InfoPlist.strings */; };
+		4FF2D92A171EE45900C91EF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2D929171EE45900C91EF3 /* main.m */; };
+		4FF2D92E171EE45900C91EF3 /* LHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2D92D171EE45900C91EF3 /* LHAppDelegate.m */; };
+		4FF2D930171EE45900C91EF3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2D92F171EE45900C91EF3 /* Default.png */; };
+		4FF2D932171EE45900C91EF3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2D931171EE45900C91EF3 /* Default@2x.png */; };
+		4FF2D934171EE45900C91EF3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2D933171EE45900C91EF3 /* Default-568h@2x.png */; };
+		4FF2D937171EE45900C91EF3 /* LHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2D936171EE45900C91EF3 /* LHViewController.m */; };
+		4FF2D93A171EE45900C91EF3 /* LHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2D938171EE45900C91EF3 /* LHViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4F879369171F271A0010D774 /* LHBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LHBarChart.h; path = LHChart/LHBarChart.h; sourceTree = "<group>"; };
+		4F87936A171F271A0010D774 /* LHBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LHBarChart.m; path = LHChart/LHBarChart.m; sourceTree = "<group>"; };
+		4F87936C171F3CD30010D774 /* LHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHChartView.h; sourceTree = "<group>"; };
+		4F87936D171F3CD30010D774 /* LHChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHChartView.m; sourceTree = "<group>"; };
+		4FF2D919171EE45900C91EF3 /* BarChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF2D91D171EE45900C91EF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4FF2D91F171EE45900C91EF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4FF2D921171EE45900C91EF3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4FF2D925171EE45900C91EF3 /* BarChart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BarChart-Info.plist"; sourceTree = "<group>"; };
+		4FF2D927171EE45900C91EF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4FF2D929171EE45900C91EF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4FF2D92B171EE45900C91EF3 /* BarChart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BarChart-Prefix.pch"; sourceTree = "<group>"; };
+		4FF2D92C171EE45900C91EF3 /* LHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHAppDelegate.h; sourceTree = "<group>"; };
+		4FF2D92D171EE45900C91EF3 /* LHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHAppDelegate.m; sourceTree = "<group>"; };
+		4FF2D92F171EE45900C91EF3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4FF2D931171EE45900C91EF3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4FF2D933171EE45900C91EF3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4FF2D935171EE45900C91EF3 /* LHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHViewController.h; sourceTree = "<group>"; };
+		4FF2D936171EE45900C91EF3 /* LHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHViewController.m; sourceTree = "<group>"; };
+		4FF2D939171EE45900C91EF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LHViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FF2D916171EE45900C91EF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF2D91E171EE45900C91EF3 /* UIKit.framework in Frameworks */,
+				4FF2D920171EE45900C91EF3 /* Foundation.framework in Frameworks */,
+				4FF2D922171EE45900C91EF3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FF2D90E171EE45900C91EF3 = {
+			isa = PBXGroup;
+			children = (
+				4FF2D923171EE45900C91EF3 /* BarChart */,
+				4FF2D91C171EE45900C91EF3 /* Frameworks */,
+				4FF2D91A171EE45900C91EF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FF2D91A171EE45900C91EF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2D919171EE45900C91EF3 /* BarChart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FF2D91C171EE45900C91EF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2D91D171EE45900C91EF3 /* UIKit.framework */,
+				4FF2D91F171EE45900C91EF3 /* Foundation.framework */,
+				4FF2D921171EE45900C91EF3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FF2D923171EE45900C91EF3 /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2D959171EE48E00C91EF3 /* LHCharts */,
+				4FF2D92C171EE45900C91EF3 /* LHAppDelegate.h */,
+				4FF2D92D171EE45900C91EF3 /* LHAppDelegate.m */,
+				4FF2D935171EE45900C91EF3 /* LHViewController.h */,
+				4FF2D936171EE45900C91EF3 /* LHViewController.m */,
+				4FF2D938171EE45900C91EF3 /* LHViewController.xib */,
+				4FF2D924171EE45900C91EF3 /* Supporting Files */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
+		4FF2D924171EE45900C91EF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2D925171EE45900C91EF3 /* BarChart-Info.plist */,
+				4FF2D926171EE45900C91EF3 /* InfoPlist.strings */,
+				4FF2D929171EE45900C91EF3 /* main.m */,
+				4FF2D92B171EE45900C91EF3 /* BarChart-Prefix.pch */,
+				4FF2D92F171EE45900C91EF3 /* Default.png */,
+				4FF2D931171EE45900C91EF3 /* Default@2x.png */,
+				4FF2D933171EE45900C91EF3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FF2D959171EE48E00C91EF3 /* LHCharts */ = {
+			isa = PBXGroup;
+			children = (
+				4F879369171F271A0010D774 /* LHBarChart.h */,
+				4F87936A171F271A0010D774 /* LHBarChart.m */,
+				4F87936C171F3CD30010D774 /* LHChartView.h */,
+				4F87936D171F3CD30010D774 /* LHChartView.m */,
+			);
+			path = LHCharts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FF2D918171EE45900C91EF3 /* BarChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF2D93D171EE45900C91EF3 /* Build configuration list for PBXNativeTarget "BarChart" */;
+			buildPhases = (
+				4FF2D915171EE45900C91EF3 /* Sources */,
+				4FF2D916171EE45900C91EF3 /* Frameworks */,
+				4FF2D917171EE45900C91EF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarChart;
+			productName = BarChart;
+			productReference = 4FF2D919171EE45900C91EF3 /* BarChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FF2D910171EE45900C91EF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LH;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = LoneHouse;
+			};
+			buildConfigurationList = 4FF2D913171EE45900C91EF3 /* Build configuration list for PBXProject "BarChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4FF2D90E171EE45900C91EF3;
+			productRefGroup = 4FF2D91A171EE45900C91EF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FF2D918171EE45900C91EF3 /* BarChart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FF2D917171EE45900C91EF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF2D928171EE45900C91EF3 /* InfoPlist.strings in Resources */,
+				4FF2D930171EE45900C91EF3 /* Default.png in Resources */,
+				4FF2D932171EE45900C91EF3 /* Default@2x.png in Resources */,
+				4FF2D934171EE45900C91EF3 /* Default-568h@2x.png in Resources */,
+				4FF2D93A171EE45900C91EF3 /* LHViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FF2D915171EE45900C91EF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF2D92A171EE45900C91EF3 /* main.m in Sources */,
+				4FF2D92E171EE45900C91EF3 /* LHAppDelegate.m in Sources */,
+				4FF2D937171EE45900C91EF3 /* LHViewController.m in Sources */,
+				4F87936B171F271A0010D774 /* LHBarChart.m in Sources */,
+				4F87936E171F3CD30010D774 /* LHChartView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4FF2D926171EE45900C91EF3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF2D927171EE45900C91EF3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4FF2D938171EE45900C91EF3 /* LHViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF2D939171EE45900C91EF3 /* en */,
+			);
+			name = LHViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4FF2D93B171EE45900C91EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4FF2D93C171EE45900C91EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FF2D93E171EE45900C91EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BarChart/BarChart-Prefix.pch";
+				INFOPLIST_FILE = "BarChart/BarChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4FF2D93F171EE45900C91EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BarChart/BarChart-Prefix.pch";
+				INFOPLIST_FILE = "BarChart/BarChart-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FF2D913171EE45900C91EF3 /* Build configuration list for PBXProject "BarChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF2D93B171EE45900C91EF3 /* Debug */,
+				4FF2D93C171EE45900C91EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF2D93D171EE45900C91EF3 /* Build configuration list for PBXNativeTarget "BarChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF2D93E171EE45900C91EF3 /* Debug */,
+				4FF2D93F171EE45900C91EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FF2D910171EE45900C91EF3 /* Project object */;
+}
