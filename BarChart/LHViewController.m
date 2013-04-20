@@ -7,7 +7,9 @@
 //
 
 #import "LHViewController.h"
-#import "LHBarChart.h"
+#import <LHChart/LHChart.h>
+
+
 
 @interface LHViewController ()
 
@@ -18,10 +20,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSDictionary * data = @{@1 : @15.5, @2 : @20.9, @3 : @25.9, @4 : @30.9, @5 : @35.9, @6 : @40.9};
+    NSDictionary * data = @{@1 : @1.5, @2 : @2.9, @3 : @3.9, @4 : @4.9, @5 : @5.9, @6 : @6.9};
     
-    UIView * someView = [[LHBarChart alloc] initWithChartData:data andRect:CGRectMake(10, 10, 300, 200)];
+    LHBarChart * someView = [[LHBarChart alloc] initWithChartData:data andRect:CGRectMake(10, 10, 300, 200)];
     someView.backgroundColor =[UIColor whiteColor];
+    someView.chartView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:someView];
     
 	// Do any additional setup after loading the view, typically from a nib.

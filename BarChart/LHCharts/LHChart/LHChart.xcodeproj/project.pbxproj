@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F496BB6172311310017774F /* LHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB2172311310017774F /* LHChartView.m */; };
+		4F496BB7172311310017774F /* LHBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB4172311310017774F /* LHBarChart.m */; };
+		4F496BBB172312E40017774F /* LHChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB91723119F0017774F /* LHChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F496BBC1723134A0017774F /* LHBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB5172311310017774F /* LHBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F496BBD1723134A0017774F /* LHChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB3172311310017774F /* LHChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4FF2D969171F20AB00C91EF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2D968171F20AB00C91EF3 /* Foundation.framework */; };
-		4FF2D96E171F20AB00C91EF3 /* LHBarChart.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4FF2D96D171F20AB00C91EF3 /* LHBarChart.h */; };
-		4FF2D970171F20AB00C91EF3 /* LHBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2D96F171F20AB00C91EF3 /* LHBarChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,18 +22,20 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				4FF2D96E171F20AB00C91EF3 /* LHBarChart.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F496BB2172311310017774F /* LHChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHChartView.m; sourceTree = "<group>"; };
+		4F496BB3172311310017774F /* LHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHChartView.h; sourceTree = "<group>"; };
+		4F496BB4172311310017774F /* LHBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBarChart.m; sourceTree = "<group>"; };
+		4F496BB5172311310017774F /* LHBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBarChart.h; sourceTree = "<group>"; };
+		4F496BB91723119F0017774F /* LHChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHChart.h; sourceTree = "<group>"; };
 		4FF2D965171F20AB00C91EF3 /* libLHChart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLHChart.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF2D968171F20AB00C91EF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4FF2D96C171F20AB00C91EF3 /* LHChart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LHChart-Prefix.pch"; sourceTree = "<group>"; };
-		4FF2D96D171F20AB00C91EF3 /* LHBarChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHBarChart.h; sourceTree = "<group>"; };
-		4FF2D96F171F20AB00C91EF3 /* LHBarChart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHBarChart.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F496BAF172310BA0017774F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4F496BB81723114E0017774F /* Containers */,
+				4F496BB1172310DC0017774F /* Views */,
+				4F496BB91723119F0017774F /* LHChart.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4F496BB1172310DC0017774F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F496BB3172311310017774F /* LHChartView.h */,
+				4F496BB2172311310017774F /* LHChartView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4F496BB81723114E0017774F /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				4F496BB5172311310017774F /* LHBarChart.h */,
+				4F496BB4172311310017774F /* LHBarChart.m */,
+			);
+			name = Containers;
+			sourceTree = "<group>";
+		};
 		4FF2D95A171F20AB00C91EF3 = {
 			isa = PBXGroup;
 			children = (
@@ -73,8 +106,7 @@
 		4FF2D96A171F20AB00C91EF3 /* LHChart */ = {
 			isa = PBXGroup;
 			children = (
-				4FF2D96D171F20AB00C91EF3 /* LHBarChart.h */,
-				4FF2D96F171F20AB00C91EF3 /* LHBarChart.m */,
+				4F496BAF172310BA0017774F /* Classes */,
 				4FF2D96B171F20AB00C91EF3 /* Supporting Files */,
 			);
 			path = LHChart;
@@ -90,6 +122,19 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4F496BBA172312D80017774F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F496BBC1723134A0017774F /* LHBarChart.h in Headers */,
+				4F496BBD1723134A0017774F /* LHChartView.h in Headers */,
+				4F496BBB172312E40017774F /* LHChart.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		4FF2D964171F20AB00C91EF3 /* LHChart */ = {
 			isa = PBXNativeTarget;
@@ -98,6 +143,7 @@
 				4FF2D961171F20AB00C91EF3 /* Sources */,
 				4FF2D962171F20AB00C91EF3 /* Frameworks */,
 				4FF2D963171F20AB00C91EF3 /* CopyFiles */,
+				4F496BBA172312D80017774F /* Headers */,
 			);
 			buildRules = (
 			);
@@ -139,7 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FF2D970171F20AB00C91EF3 /* LHBarChart.m in Sources */,
+				4F496BB6172311310017774F /* LHChartView.m in Sources */,
+				4F496BB7172311310017774F /* LHBarChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,9 +244,12 @@
 				DSTROOT = /tmp/LHChart.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LHChart/LHChart-Prefix.pch";
+				INSTALL_PATH = /;
 				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -209,9 +259,12 @@
 				DSTROOT = /tmp/LHChart.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LHChart/LHChart-Prefix.pch";
+				INSTALL_PATH = /;
 				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
@@ -234,6 +287,7 @@
 				4FF2D975171F20AB00C91EF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
