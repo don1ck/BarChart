@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F29EBE91723446600B43DC9 /* LHDefaultBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F29EBE71723446600B43DC9 /* LHDefaultBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F29EBEA1723446600B43DC9 /* LHDefaultBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F29EBE81723446600B43DC9 /* LHDefaultBar.m */; };
-		4F496BB6172311310017774F /* LHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB2172311310017774F /* LHChartView.m */; };
-		4F496BB7172311310017774F /* LHBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB4172311310017774F /* LHBarChart.m */; };
+		4F29EBE91723446600B43DC9 /* LHBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F29EBE71723446600B43DC9 /* LHBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F29EBEA1723446600B43DC9 /* LHBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F29EBE81723446600B43DC9 /* LHBar.m */; };
+		4F496BB6172311310017774F /* LHBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB2172311310017774F /* LHBarChart.m */; };
+		4F496BB7172311310017774F /* LHScrollableContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB4172311310017774F /* LHScrollableContainer.m */; };
 		4F496BBB172312E40017774F /* LHChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB91723119F0017774F /* LHChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F496BBC1723134A0017774F /* LHBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB5172311310017774F /* LHBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F496BBD1723134A0017774F /* LHChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB3172311310017774F /* LHChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F496BBC1723134A0017774F /* LHScrollableContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB5172311310017774F /* LHScrollableContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F496BBD1723134A0017774F /* LHBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB3172311310017774F /* LHBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F573CE9172469490092182B /* LHSquareBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F573CE7172469490092182B /* LHSquareBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F573CEA172469490092182B /* LHSquareBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F573CE8172469490092182B /* LHSquareBar.m */; };
 		4FF2D969171F20AB00C91EF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2D968171F20AB00C91EF3 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,13 +32,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4F29EBE71723446600B43DC9 /* LHDefaultBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDefaultBar.h; sourceTree = "<group>"; };
-		4F29EBE81723446600B43DC9 /* LHDefaultBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDefaultBar.m; sourceTree = "<group>"; };
-		4F496BB2172311310017774F /* LHChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHChartView.m; sourceTree = "<group>"; };
-		4F496BB3172311310017774F /* LHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHChartView.h; sourceTree = "<group>"; };
-		4F496BB4172311310017774F /* LHBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBarChart.m; sourceTree = "<group>"; };
-		4F496BB5172311310017774F /* LHBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBarChart.h; sourceTree = "<group>"; };
+		4F29EBE71723446600B43DC9 /* LHBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBar.h; sourceTree = "<group>"; };
+		4F29EBE81723446600B43DC9 /* LHBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBar.m; sourceTree = "<group>"; };
+		4F496BB2172311310017774F /* LHBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBarChart.m; sourceTree = "<group>"; };
+		4F496BB3172311310017774F /* LHBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBarChart.h; sourceTree = "<group>"; };
+		4F496BB4172311310017774F /* LHScrollableContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHScrollableContainer.m; sourceTree = "<group>"; };
+		4F496BB5172311310017774F /* LHScrollableContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHScrollableContainer.h; sourceTree = "<group>"; };
 		4F496BB91723119F0017774F /* LHChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHChart.h; sourceTree = "<group>"; };
+		4F573CE7172469490092182B /* LHSquareBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSquareBar.h; sourceTree = "<group>"; };
+		4F573CE8172469490092182B /* LHSquareBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSquareBar.m; sourceTree = "<group>"; };
 		4FF2D965171F20AB00C91EF3 /* libLHChart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLHChart.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF2D968171F20AB00C91EF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4FF2D96C171F20AB00C91EF3 /* LHChart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LHChart-Prefix.pch"; sourceTree = "<group>"; };
@@ -57,8 +61,10 @@
 		4F29EBE5172343F200B43DC9 /* BarTemplates */ = {
 			isa = PBXGroup;
 			children = (
-				4F29EBE71723446600B43DC9 /* LHDefaultBar.h */,
-				4F29EBE81723446600B43DC9 /* LHDefaultBar.m */,
+				4F29EBE71723446600B43DC9 /* LHBar.h */,
+				4F29EBE81723446600B43DC9 /* LHBar.m */,
+				4F573CE7172469490092182B /* LHSquareBar.h */,
+				4F573CE8172469490092182B /* LHSquareBar.m */,
 			);
 			name = BarTemplates;
 			sourceTree = "<group>";
@@ -77,8 +83,8 @@
 		4F496BB1172310DC0017774F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4F496BB3172311310017774F /* LHChartView.h */,
-				4F496BB2172311310017774F /* LHChartView.m */,
+				4F496BB3172311310017774F /* LHBarChart.h */,
+				4F496BB2172311310017774F /* LHBarChart.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -86,8 +92,8 @@
 		4F496BB81723114E0017774F /* Containers */ = {
 			isa = PBXGroup;
 			children = (
-				4F496BB5172311310017774F /* LHBarChart.h */,
-				4F496BB4172311310017774F /* LHBarChart.m */,
+				4F496BB5172311310017774F /* LHScrollableContainer.h */,
+				4F496BB4172311310017774F /* LHScrollableContainer.m */,
 			);
 			name = Containers;
 			sourceTree = "<group>";
@@ -141,10 +147,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F496BBC1723134A0017774F /* LHBarChart.h in Headers */,
-				4F496BBD1723134A0017774F /* LHChartView.h in Headers */,
+				4F496BBC1723134A0017774F /* LHScrollableContainer.h in Headers */,
+				4F496BBD1723134A0017774F /* LHBarChart.h in Headers */,
 				4F496BBB172312E40017774F /* LHChart.h in Headers */,
-				4F29EBE91723446600B43DC9 /* LHDefaultBar.h in Headers */,
+				4F29EBE91723446600B43DC9 /* LHBar.h in Headers */,
+				4F573CE9172469490092182B /* LHSquareBar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F496BB6172311310017774F /* LHChartView.m in Sources */,
-				4F496BB7172311310017774F /* LHBarChart.m in Sources */,
-				4F29EBEA1723446600B43DC9 /* LHDefaultBar.m in Sources */,
+				4F496BB6172311310017774F /* LHBarChart.m in Sources */,
+				4F496BB7172311310017774F /* LHScrollableContainer.m in Sources */,
+				4F29EBEA1723446600B43DC9 /* LHBar.m in Sources */,
+				4F573CEA172469490092182B /* LHSquareBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

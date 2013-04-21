@@ -6,5 +6,7 @@
 //  Copyright (c) 2013 LoneHouse. All rights reserved.
 //
 
-#import <LHChart/LHChartView.h>
 #import <LHChart/LHBarChart.h>
+#import <LHChart/LHScrollableContainer.h>
+#import <LHChart/LHBar.h>
+#import <LHChart/LHSquareBar.h>

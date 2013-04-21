@@ -20,15 +20,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSDictionary * data = @{@1 : @1.5, @2 : @2.9, @3 : @3.9, @4 : @4.9, @5 : @5.9, @6 : @6.9};
+    NSDictionary * data = @{@1 : @1.5, @3 : @3.9, @4 : @4.9, @5 : @5.9, @6 : @6.9,@7 : @7.5, @8 : @8.4, @9 : @3.9, @10 : @4.9, @11 : @5.9, @12 : @6.9};
     
-    LHBarChart * someView = [[LHBarChart alloc] initWithChartData:data andRect:CGRectMake(10, 10, 300, 200)];
-    someView.backgroundColor =[UIColor whiteColor];
-    someView.chartView.backgroundColor = [UIColor whiteColor];
-    someView.chartView.isVerticalGridHidden = YES;
-    [self.view addSubview:someView];
+    LHBarChart * chartView = [[LHBarChart alloc] initWithChartData:data andChartBar:[[[LHSquareBar alloc] init] autorelease]];
+    LHScrollableContainer * container = [[LHScrollableContainer alloc] initWithChartView:chartView andRect:self.view.bounds];
+
+
+    container.backgroundColor =[UIColor whiteColor];
+    container.chartView.backgroundColor = [UIColor whiteColor];
+    [(LHBarChart*)container.chartView setIsAccessibilityElement:YES];
+    [self.view addSubview:container];
     
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 - (void)didReceiveMemoryWarning

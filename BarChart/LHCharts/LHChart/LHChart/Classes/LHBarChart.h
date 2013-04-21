@@ -1,5 +1,5 @@
 //
-//  LHBarChart.h
+//  LHChartView.h
 //  BarChart
 //
 //  Created by Victor on 17.04.13.
@@ -8,20 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-@class LHChartView;
+@class LHBar;
 
-@interface LHBarChart : UIScrollView
+@interface LHBarChart : UIView
+
+@property (nonatomic,assign) float axeStep_x;
+@property (nonatomic,assign) float axeStep_y;
+
+@property (nonatomic,assign) float chartBarWidth;
+@property (nonatomic,assign) float chartBarPointHeight;
+
+@property (nonatomic,assign) float axesWidth;
+
+@property (nonatomic,retain) UIColor * gridColor;
+
+@property (nonatomic,assign) BOOL isVerticalGridHidden;
+@property (nonatomic,assign) BOOL isHorizontalGridHidden;
+
+@property (nonatomic,assign) float segmentLength;
 
 
+@property (nonatomic,retain) LHBar * barTemplate;
 
-@property (nonatomic,assign) float offsetSide;
-@property (nonatomic,assign) float offsetTop;
-@property (nonatomic,assign) float offsetBottom;
-
-
-
-@property (nonatomic,readonly) LHChartView * chartView;
-
-- (id)initWithChartData:(NSDictionary*) chartData andRect:(CGRect) rect;
+- (id)initWithChartData:(NSDictionary*) chartData andChartBar:(LHBar*) bar;
 
 @end
