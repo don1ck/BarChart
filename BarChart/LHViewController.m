@@ -25,6 +25,7 @@
     LHBarChart * someView = [[LHBarChart alloc] initWithChartData:data andRect:CGRectMake(10, 10, 300, 200)];
     someView.backgroundColor =[UIColor whiteColor];
     someView.chartView.backgroundColor = [UIColor whiteColor];
+    someView.chartView.isVerticalGridHidden = YES;
     [self.view addSubview:someView];
     
 	// Do any additional setup after loading the view, typically from a nib.

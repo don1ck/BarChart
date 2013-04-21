@@ -18,8 +18,12 @@
 #define BACKGROUND_GRID_DEFAULT_COLOR [UIColor grayColor]
 
 
+#define viewHeight self.bounds.size.height
+#define viewWidth self.bounds.size.width
+
 
 #import "LHChartView.h"
+#import "LHDefaultBar.h"
 
 @interface LHChartView ()
 {
@@ -52,7 +56,8 @@
         
         self.axesWidth = AXE_DEFAULT_WIDTH;
         
-        self.chartStyle = kChartStyleBar;
+        self.barTemplate = [[LHDefaultBar alloc] init];
+        [self.barTemplate release];
         
         self.gridColor = BACKGROUND_GRID_DEFAULT_COLOR;
         
@@ -65,8 +70,8 @@
 {
     CGRect frame = self.frame;
     
-    frame.size.width  = self.chartBarWidth * max_x+100;
-    frame.size.height = self.chartBarPointHeight * max_y+100;
+    frame.size.width  = self.chartBarWidth * max_x;
+    frame.size.height = self.chartBarPointHeight * max_y;
     self.frame = frame;
 }
 
@@ -83,7 +88,6 @@
     CGContextSetLineWidth(context, self.axesWidth);
 
     
-    float viewHeight = self.bounds.size.height;
     
     CGContextMoveToPoint(context, 0, viewHeight);
     
@@ -111,29 +115,46 @@
 {
     CGContextBeginPath(context);
     
+    CGPathRef path;
+    for (NSNumber * key in self.chartData.allKeys) {
+        CGPoint rootPoint = CGPointMake(self.chartBarWidth*[key intValue],viewHeight - self.segmentLength);
+        path = [self.barTemplate pathOfBarInContext:context
+                                    forValue:[[self.chartData objectForKey:key] floatValue]
+                                    withRootPoint:rootPoint
+                                    pointHeight:self.chartBarPointHeight
+                                    andBarWidth:self.chartBarWidth];
+    }
     
     CGContextClosePath(context);
 }
 
+//Drawing background grid with dash line
 - (void) drawBackgroundGrid: (CGContextRef) context
 {
     CGContextBeginPath(context);
+    
+    //setup dash line of background grid
     CGContextSetLineWidth(context, BACKGROUND_GRID_DEFAULT_LINE_WIDTH);
     CGContextSetStrokeColorWithColor(context, self.gridColor.CGColor);
+    CGContextSetLineJoin(context, kCGLineJoinRound);
     
-    CGFloat lengths[] = {5,5};
+    CGFloat lengths[] = {1,6};
     CGContextSetLineDash(context, 0, lengths, 2);
     
-    float viewHeight = self.bounds.size.height;
-    float viewWidth  = self.bounds.size.width;
     
-    //Draw horizontal lines
-    for (int i = 1; i <= max_y; i++) {
-        CGContextMoveToPoint(   context, 0, viewHeight - (self.chartBarPointHeight * i));
-        CGContextAddLineToPoint(context, viewWidth, viewHeight - (self.chartBarPointHeight * i));
-        //CGContextMoveToPoint(   context, 0, viewHeight - (self.chartBarPointHeight * i));
+    //Draw horizontal lines if needed
+    for (int i = 1; i <= (self.isHorizontalGridHidden?0:max_y); i++) {
+        CGContextMoveToPoint   (context, 0, viewHeight - (self.chartBarPointHeight * i));
+        CGContextAddLineToPoint(context, self.chartBarWidth * max_x, viewHeight - (self.chartBarPointHeight * i));
     }
     
+    //Draw vertical lines if needed
+    for (int i = 1; i <= (self.isVerticalGridHidden?0:max_x); i++) {
+        CGContextMoveToPoint(   context, self.chartBarWidth * i, viewHeight);
+        CGContextAddLineToPoint(context, self.chartBarWidth * i, viewHeight - (self.chartBarPointHeight * max_y));
+    }
+    
+    CGContextMoveToPoint(context, 0, 0);
     CGContextClosePath(context);
 }
 
@@ -146,20 +167,6 @@
     CGContextDrawPath(context, kCGPathStroke);
     [self drawBackgroundGrid:context];
     CGContextDrawPath(context, kCGPathStroke);
-    
-    
-    switch (self.chartStyle) {
-        case kChartStyleBar:
-            
-            break;
-            
-        default:
-            NSAssert(YES, @"Wrong enum value :(");
-            break;
-    }
-    
- 
-    
     
 }
 

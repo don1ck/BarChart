@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-enum kChartStyle {
-    kChartStyleBar,
-    kChartStyleLine
-    };
+@protocol LHBarTemplate <NSObject>
+
+-(CGPathRef) pathOfBarInContext:(CGContextRef)context forValue:(float) value withRootPoint:(CGPoint) rootPoint pointHeight:(float) pointHeight andBarWidth:(float) barWidth;
+
+@end
 
 @interface LHChartView : UIView
 
@@ -25,9 +26,13 @@ enum kChartStyle {
 
 @property (nonatomic,retain) UIColor * gridColor;
 
+@property (nonatomic,assign) BOOL isVerticalGridHidden;
+@property (nonatomic,assign) BOOL isHorizontalGridHidden;
+
 @property (nonatomic,assign) float segmentLength;
 
-@property (nonatomic,assign) enum kChartStyle chartStyle;
+
+@property (nonatomic,retain) id<LHBarTemplate>  barTemplate;
 
 - (id)initWithChartData:(NSDictionary*) chartData;
 

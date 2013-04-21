@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F29EBE91723446600B43DC9 /* LHDefaultBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F29EBE71723446600B43DC9 /* LHDefaultBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F29EBEA1723446600B43DC9 /* LHDefaultBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F29EBE81723446600B43DC9 /* LHDefaultBar.m */; };
 		4F496BB6172311310017774F /* LHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB2172311310017774F /* LHChartView.m */; };
 		4F496BB7172311310017774F /* LHBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB4172311310017774F /* LHBarChart.m */; };
 		4F496BBB172312E40017774F /* LHChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F496BB91723119F0017774F /* LHChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F29EBE71723446600B43DC9 /* LHDefaultBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHDefaultBar.h; sourceTree = "<group>"; };
+		4F29EBE81723446600B43DC9 /* LHDefaultBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDefaultBar.m; sourceTree = "<group>"; };
 		4F496BB2172311310017774F /* LHChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHChartView.m; sourceTree = "<group>"; };
 		4F496BB3172311310017774F /* LHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHChartView.h; sourceTree = "<group>"; };
 		4F496BB4172311310017774F /* LHBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBarChart.m; sourceTree = "<group>"; };
@@ -50,9 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F29EBE5172343F200B43DC9 /* BarTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				4F29EBE71723446600B43DC9 /* LHDefaultBar.h */,
+				4F29EBE81723446600B43DC9 /* LHDefaultBar.m */,
+			);
+			name = BarTemplates;
+			sourceTree = "<group>";
+		};
 		4F496BAF172310BA0017774F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4F29EBE5172343F200B43DC9 /* BarTemplates */,
 				4F496BB81723114E0017774F /* Containers */,
 				4F496BB1172310DC0017774F /* Views */,
 				4F496BB91723119F0017774F /* LHChart.h */,
@@ -130,6 +144,7 @@
 				4F496BBC1723134A0017774F /* LHBarChart.h in Headers */,
 				4F496BBD1723134A0017774F /* LHChartView.h in Headers */,
 				4F496BBB172312E40017774F /* LHChart.h in Headers */,
+				4F29EBE91723446600B43DC9 /* LHDefaultBar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +202,7 @@
 			files = (
 				4F496BB6172311310017774F /* LHChartView.m in Sources */,
 				4F496BB7172311310017774F /* LHBarChart.m in Sources */,
+				4F29EBEA1723446600B43DC9 /* LHDefaultBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
