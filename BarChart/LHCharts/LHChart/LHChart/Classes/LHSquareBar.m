@@ -14,6 +14,7 @@
 {
     CGContextSetLineWidth(context, 3);
     CGContextSetFillColorWithColor(context, [[UIColor blueColor] CGColor]);
+    CGContextSetShadow(context, CGSizeMake(20, 20), 5);
     
     CGRect barRect = CGRectMake(self.rootPoint.x-self.barWidth/4, self.rootPoint.y, self.barWidth/2, (-self.value*self.pointHeight) + self.segmentLenght);
     
