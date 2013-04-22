@@ -28,7 +28,7 @@
 
     container.backgroundColor =[UIColor whiteColor];
     container.chartView.backgroundColor = [UIColor whiteColor];
-    [(LHBarChart*)container.chartView setIsAccessibilityElement:YES];
+    [(LHBarChart*)container.chartView setIsVerticalGridHidden:YES];
     [self.view addSubview:container];
     
 	// Do any additional setup after loading the view, typically from a nib.
