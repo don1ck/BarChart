@@ -27,7 +27,7 @@
 
 - (id)initWithChartView:(LHChartView*) chartView andRect:(CGRect) rect
 {
-    self = [super initWithFrame:rect];
+    self = [super init];
     if (self) {
     
         _chartView = chartView;
@@ -40,14 +40,13 @@
 		_axisLabel_x = [[UILabel alloc] init];
 		_axisLabel_y = [[UILabel alloc] init];
 		
-		
-		self.pinchGestureRecognizer.delegate = self;
-		self.pinchGestureRecognizer.delegate = self;
-		[self.panGestureRecognizer addTarget:self action:@selector(handlePanGesture:)];
-		[self.pinchGestureRecognizer addTarget:self action:@selector(handlePinchGesture:)];
+		_containerView = [[UIScrollView alloc] initWithFrame:rect];
+        _containerView.delegate = self;
+        _containerView.minimumZoomScale = 0.5;
+        _containerView.maximumZoomScale = 2;
         
         [self setupContentSize];
-        [self addSubview:_chartView];
+        [self.containerView addSubview:_chartView];
         
     }
     return self;
@@ -58,32 +57,28 @@
     float contentWidth = (self.offsetSide * 2) + self.chartView.bounds.size.width;
     float contentHeight = (self.offsetTop + self.offsetBottom) + self.chartView.bounds.size.height;
     CGSize contentSize = CGSizeMake(contentWidth, contentHeight);
-    self.contentSize = contentSize;
+    self.containerView.contentSize = contentSize;
         CGRect frame = self.chartView.bounds;
     frame.origin.x = self.offsetSide;
     frame.origin.y = self.offsetTop;
     self.chartView.frame = frame;
 }
 
-#pragma mark - gesture managment
+#pragma mark - scroll view delegate
 
-- (void)handlePanGesture:(UIGestureRecognizer *)gestureRecognizer
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-	NSLog(@"!!");
+    [self.chartView setNeedsDisplay];
+}
+
+-(void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
 
 }
 
-- (void)handlePinchGesture:(UIGestureRecognizer *)gestureRecognizer
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-	NSLog(@"---");
-}
-
-
-#pragma mark - gesture recognizer  delegate
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer  shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-{
-	return YES;
+    return self.chartView;
 }
 
 #pragma mark - LHChartView delegate
@@ -91,10 +86,15 @@
 -(CGRect)rectToDrawIn
 {
 	CGRect visibleRect;
-	visibleRect.origin = self.contentOffset;
+	visibleRect.origin = self.containerView.contentOffset;
 	visibleRect.origin.x -= self.offsetSide;
-	visibleRect.origin.y -=self.offsetTop;
-	visibleRect.size = self.frame.size;
+	visibleRect.origin.y -= self.offsetTop;
+	visibleRect.size = self.containerView.frame.size;
+    float theScale = 1.0 / self.containerView.zoomScale;
+    visibleRect.origin.x *= theScale;
+    visibleRect.origin.y *= theScale;
+    visibleRect.size.width *= theScale;
+    visibleRect.size.height *= theScale;
 	return visibleRect;
 }
 

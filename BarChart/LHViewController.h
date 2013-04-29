@@ -10,7 +10,7 @@
 #import <LHChart/LHChart.h>
 
 @interface LHViewController : UIViewController 
-- (IBAction)btnTap:(UIButton *)sender;
-- (IBAction)sliderValueChanged:(UISlider *)sender;
+
+
 
 @end

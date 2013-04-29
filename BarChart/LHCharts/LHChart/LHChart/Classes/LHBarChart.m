@@ -93,7 +93,7 @@
 		int drawYSegmentFrom = max_y - (rect.size.height + rect.origin.y) / self.chartBarPointHeight;
 		int drawYSegmentTo = max_y - (rect.origin.y / self.chartBarPointHeight);
 		
-		CGContextMoveToPoint(   context, 0, viewHeight - (self.chartBarPointHeight * drawYSegmentFrom-1));
+		CGContextMoveToPoint(   context, 0, viewHeight - (self.chartBarPointHeight * drawYSegmentFrom - 1));
 		
 		//Drawing Y axe with segments. (drawYSegmentTo+1) - give extra line on the top
 		for (int i = drawYSegmentFrom; i<=drawYSegmentTo+1; i++) {
@@ -102,40 +102,51 @@
 			CGContextMoveToPoint(   context, 0, viewHeight - (self.chartBarPointHeight * i));
 		}
 	}
-
     
-    CGContextMoveToPoint(context, 0, viewHeight);
+    BOOL isAxisXVisible = rect.origin.y+rect.size.height > self.bounds.size.height - self.segmentLength;
     
-    //Drawing X axe. (max_y+1) - give extra line on the side
-    for (int i = 1; i<=(max_x+1); i++) {
-        CGContextAddLineToPoint(context, self.chartBarWidth * i, viewHeight);
-        CGContextAddLineToPoint(context, self.chartBarWidth * i, viewHeight-self.segmentLength);
-        CGContextMoveToPoint(   context, self.chartBarWidth * i, viewHeight);
+    
+    if (isAxisXVisible) {
+        
+        int drawXsegmentFrom = rect.origin.x / self.chartBarWidth;
+        int drawXsegmentTo   = (rect.origin.x + rect.size.width) / self.chartBarWidth;
+        
+        CGContextMoveToPoint(context, (drawXsegmentFrom+1) * self.chartBarWidth, viewHeight);
+        
+        //Drawing X axe. (drawXsegmentTo+1) - give extra line on the side
+        for (int i = drawXsegmentFrom; i<=(drawXsegmentTo+1); i++) {
+            CGContextAddLineToPoint(context, self.chartBarWidth * i, viewHeight);
+            CGContextAddLineToPoint(context, self.chartBarWidth * i, viewHeight-self.segmentLength);
+            CGContextMoveToPoint(   context, self.chartBarWidth * i, viewHeight);
+        }
+        CGContextClosePath(context);
     }
     
-    CGContextClosePath(context);
+    
 }
 
 //Draw chart by Bars
-- (void) drawBarChart:(CGContextRef) context
+- (void) drawBarChart:(CGContextRef) context inRect:(CGRect) rect
 {
-
+    int drawBarFrom = rect.origin.x / self.chartBarWidth;
+    int drawBarTo   = (rect.origin.x + rect.size.width) / self.chartBarWidth;
     
     for (NSNumber * key in self.chartData.allKeys) {
-        //this is point just above the segment
-        CGPoint rootPoint = CGPointMake(self.chartBarWidth*[key intValue],viewHeight - self.segmentLength);
-        
-        //giving to the bar template all necessary info 
-        [self.barTemplate setValue:[[self.chartData objectForKey:key] floatValue]
-                         rootPoint:rootPoint
-                       pointHeight:self.chartBarPointHeight
-                          barWidth:self.chartBarWidth
-                  andSegmentLenght:self.segmentLength];
-        
-        [self.barTemplate drawInContext:context];
+        // drawBarFrom - 1 - to see first left bar & drawBarTo + 1 to see last right bar
+        if ([key intValue]>drawBarFrom - 1 && [key intValue] < drawBarTo + 1) {
+            //this is point just above the segment
+            CGPoint rootPoint = CGPointMake(self.chartBarWidth*[key intValue],viewHeight - self.segmentLength);
+            
+            //giving to the bar template all necessary info
+            [self.barTemplate setValue:[[self.chartData objectForKey:key] floatValue]
+                             rootPoint:rootPoint
+                           pointHeight:self.chartBarPointHeight
+                              barWidth:self.chartBarWidth
+                      andSegmentLenght:self.segmentLength];
+            
+            [self.barTemplate drawInContext:context];
+        }
     }
-    
-
 }
 
 //Drawing background grid with dash line
@@ -179,7 +190,7 @@
     CGContextDrawPath(context, kCGPathStroke);
     [self drawBackgroundGrid:context];
     CGContextDrawPath(context, kCGPathStroke);
-    [self drawBarChart:context];
+    [self drawBarChart:context inRect:rectToDraw];
     CGContextDrawPath(context, kCGPathStroke);
 }
 

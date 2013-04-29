@@ -13,4 +13,6 @@
 
 @interface LHChartView : UIView
 @property (nonatomic,assign) id<LHChartViewDelegate> delegate;
+@property (nonatomic,assign) float chartBarWidth;
+@property (nonatomic,assign) float chartBarPointHeight;
 @end

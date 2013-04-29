@@ -29,13 +29,13 @@
     
     chartView = [[LHBarChart alloc] initWithChartData:data andChartBar:[[[LHSquareBar alloc] init] autorelease]];
 
-	container = [[LHScrollableContainer alloc] initWithChartView:chartView andRect:CGRectMake(0, 0, 480, 200)];
+	container = [[LHScrollableContainer alloc] initWithChartView:chartView andRect:self.view.bounds];
 
 
-    container.backgroundColor =[UIColor whiteColor];
+    container.containerView.backgroundColor = [UIColor whiteColor];
     container.chartView.backgroundColor = [UIColor whiteColor];
     [(LHBarChart*)container.chartView setIsVerticalGridHidden:YES];
-    [self.view addSubview:container];
+    [self.view addSubview:container.containerView];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

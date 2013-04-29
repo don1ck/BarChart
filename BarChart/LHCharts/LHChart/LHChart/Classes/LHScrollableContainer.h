@@ -11,7 +11,7 @@
 @class LHBarChart;
 
 
-@interface LHScrollableContainer : UIScrollView <UIGestureRecognizerDelegate,LHChartViewDelegate>
+@interface LHScrollableContainer : NSObject <UIScrollViewDelegate,LHChartViewDelegate>
 
 @property (nonatomic,assign) float offsetSide;
 @property (nonatomic,assign) float offsetTop;
@@ -19,6 +19,8 @@
 
 @property (nonatomic,readonly) UILabel * axisLabel_x;
 @property (nonatomic,readonly) UILabel * axisLabel_y;
+
+@property (nonatomic,readonly) UIScrollView * containerView;
 
 @property (nonatomic,readonly) LHChartView * chartView;
 

@@ -16,9 +16,6 @@
 @property (nonatomic,assign) float axeStep_x;
 @property (nonatomic,assign) float axeStep_y;
 
-@property (nonatomic,assign) float chartBarWidth;
-@property (nonatomic,assign) float chartBarPointHeight;
-
 @property (nonatomic,assign) float axesWidth;
 
 @property (nonatomic,retain) UIColor * gridColor;
