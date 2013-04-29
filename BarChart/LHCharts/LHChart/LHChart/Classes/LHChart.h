@@ -10,3 +10,4 @@
 #import <LHChart/LHScrollableContainer.h>
 #import <LHChart/LHBar.h>
 #import <LHChart/LHSquareBar.h>
+#import <LHChart/LHChartView.h>

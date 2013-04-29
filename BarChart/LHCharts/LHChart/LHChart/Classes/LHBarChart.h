@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LHChartView.h"
 
 @class LHBar;
 
-@interface LHBarChart : UIView
+@interface LHBarChart : LHChartView
 
 @property (nonatomic,assign) float axeStep_x;
 @property (nonatomic,assign) float axeStep_y;
@@ -27,9 +28,10 @@
 
 @property (nonatomic,assign) float segmentLength;
 
-
 @property (nonatomic,retain) LHBar * barTemplate;
 
 - (id)initWithChartData:(NSDictionary*) chartData andChartBar:(LHBar*) bar;
+
+- (void)reDrawView;
 
 @end

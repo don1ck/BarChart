@@ -7,21 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LHChartView.h"
 @class LHBarChart;
 
-@interface LHScrollableContainer : UIScrollView
 
-
+@interface LHScrollableContainer : UIScrollView <UIGestureRecognizerDelegate,LHChartViewDelegate>
 
 @property (nonatomic,assign) float offsetSide;
 @property (nonatomic,assign) float offsetTop;
 @property (nonatomic,assign) float offsetBottom;
 
+@property (nonatomic,readonly) UILabel * axisLabel_x;
+@property (nonatomic,readonly) UILabel * axisLabel_y;
 
+@property (nonatomic,readonly) LHChartView * chartView;
 
-@property (nonatomic,readonly) UIView * chartView;
-
-- (id)initWithChartView:(UIView*) chartView andRect:(CGRect) rect;
+- (id)initWithChartView:(LHChartView*) chartView andRect:(CGRect) rect;
 
 @end

@@ -77,7 +77,7 @@
 #pragma mark - drawing
 
 //Draw X and Y axes
-- (void) drawAxes:(CGContextRef) context
+- (void) drawAxes:(CGContextRef) context inRect:(CGRect) rect
 {
     CGContextBeginPath(context);
     
@@ -85,17 +85,24 @@
     CGContextSetLineJoin(context, kCGLineJoinRound);
     CGContextSetLineCap(context, kCGLineCapRound);
     CGContextSetLineWidth(context, self.axesWidth);
+	
+	BOOL isAxisYVisible = rect.origin.x < self.segmentLength;
 
-    
-    
-    CGContextMoveToPoint(context, 0, viewHeight);
-    
-    //Drawing Y axe with segments. (max_y+1) - give extra line on the top
-    for (int i = 1; i<=(max_y+1); i++) {
-        CGContextAddLineToPoint(context, 0, viewHeight - (self.chartBarPointHeight * i));
-        CGContextAddLineToPoint(context, self.segmentLength, viewHeight - (self.chartBarPointHeight * i));
-        CGContextMoveToPoint(   context, 0, viewHeight - (self.chartBarPointHeight * i));
-    }
+	if (isAxisYVisible) {
+		//Getting count of Visible segments
+		int drawYSegmentFrom = max_y - (rect.size.height + rect.origin.y) / self.chartBarPointHeight;
+		int drawYSegmentTo = max_y - (rect.origin.y / self.chartBarPointHeight);
+		
+		CGContextMoveToPoint(   context, 0, viewHeight - (self.chartBarPointHeight * drawYSegmentFrom-1));
+		
+		//Drawing Y axe with segments. (drawYSegmentTo+1) - give extra line on the top
+		for (int i = drawYSegmentFrom; i<=drawYSegmentTo+1; i++) {
+			CGContextAddLineToPoint(context, 0, viewHeight - (self.chartBarPointHeight * i));
+			CGContextAddLineToPoint(context, self.segmentLength, viewHeight - (self.chartBarPointHeight * i));
+			CGContextMoveToPoint(   context, 0, viewHeight - (self.chartBarPointHeight * i));
+		}
+	}
+
     
     CGContextMoveToPoint(context, 0, viewHeight);
     
@@ -164,15 +171,46 @@
 
 - (void) drawRect:(CGRect)rect
 {
+	CGRect rectToDraw = [self getRectToDrawIn];
+	
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    [self drawAxes:context];
+    [self drawAxes:context inRect:rectToDraw];
     CGContextDrawPath(context, kCGPathStroke);
     [self drawBackgroundGrid:context];
     CGContextDrawPath(context, kCGPathStroke);
     [self drawBarChart:context];
     CGContextDrawPath(context, kCGPathStroke);
-    
 }
+
+
+//Force view to redraw it content
+-(void) reDrawView
+{
+	[self setNeedsDisplay];
+}
+
+#pragma mark - memory managmetn
+
+-(void)dealloc
+{
+	[super dealloc];
+	[self.gridColor release];
+	[self.barTemplate release];
+}
+
+#pragma mark - delegate
+
+-(CGRect) getRectToDrawIn
+{
+	CGRect rect;
+	if (self.delegate && [self.delegate respondsToSelector:@selector(rectToDrawIn)]) {
+		rect = [self.delegate rectToDrawIn];
+	} else {
+		rect = self.bounds;
+	}
+	return rect;
+}
+
 
 @end

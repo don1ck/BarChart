@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05A01BDE172AA4B400F8A3F5 /* LHChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A01BDD172AA29600F8A3F5 /* LHChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05A01BE2172AB94900F8A3F5 /* LHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A01BE1172AB94900F8A3F5 /* LHChartView.m */; };
 		4F29EBE91723446600B43DC9 /* LHBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F29EBE71723446600B43DC9 /* LHBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F29EBEA1723446600B43DC9 /* LHBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F29EBE81723446600B43DC9 /* LHBar.m */; };
 		4F496BB6172311310017774F /* LHBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F496BB2172311310017774F /* LHBarChart.m */; };
@@ -32,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05A01BDD172AA29600F8A3F5 /* LHChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHChartView.h; sourceTree = "<group>"; };
+		05A01BE1172AB94900F8A3F5 /* LHChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHChartView.m; sourceTree = "<group>"; };
 		4F29EBE71723446600B43DC9 /* LHBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHBar.h; sourceTree = "<group>"; };
 		4F29EBE81723446600B43DC9 /* LHBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBar.m; sourceTree = "<group>"; };
 		4F496BB2172311310017774F /* LHBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHBarChart.m; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 			children = (
 				4F496BB3172311310017774F /* LHBarChart.h */,
 				4F496BB2172311310017774F /* LHBarChart.m */,
+				05A01BDD172AA29600F8A3F5 /* LHChartView.h */,
+				05A01BE1172AB94900F8A3F5 /* LHChartView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -152,6 +158,7 @@
 				4F496BBB172312E40017774F /* LHChart.h in Headers */,
 				4F29EBE91723446600B43DC9 /* LHBar.h in Headers */,
 				4F573CE9172469490092182B /* LHSquareBar.h in Headers */,
+				05A01BDE172AA4B400F8A3F5 /* LHChartView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +218,7 @@
 				4F496BB7172311310017774F /* LHScrollableContainer.m in Sources */,
 				4F29EBEA1723446600B43DC9 /* LHBar.m in Sources */,
 				4F573CEA172469490092182B /* LHSquareBar.m in Sources */,
+				05A01BE2172AB94900F8A3F5 /* LHChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
